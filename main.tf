@@ -20,7 +20,7 @@ resource "aws_instance" "infra-instance" {
 
     provisioner "remoteInfra-instance" {
         inline = [
-            "chmod u+x /tmp/web.sh",
+            "chmod +x /tmp/web.sh",
             "sudo /tmp/web.sh"
         ]
     }
