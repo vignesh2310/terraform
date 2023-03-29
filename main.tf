@@ -18,7 +18,7 @@ resource "aws_instance" "infra-instance" {
         destination = "/tmp/web.sh"
     }
 
-    provisioner "remoteInfra-instance" {
+    provisioner "remote-exec" {
         inline = [
             "chmod +x /tmp/web.sh",
             "sudo /tmp/web.sh"
